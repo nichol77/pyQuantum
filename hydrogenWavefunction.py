@@ -14,6 +14,8 @@
 
 # # Hydrogen wavefunctions
 #
+# None of the material in this notebook is required knowledge for PHAS0004. These are topics you will come back to in next year's quant
+#
 # The normalised radial wavefunction is:
 # $$ R_{nl}(r)=\sqrt{\left(\frac{2}{n a_0}\right)^3 \frac{(n-l-1)!}{2n(n+l)!}} \exp\left(\frac{-r}{n a_0}\right) \left(\frac{2r}{n a_0}\right)^l L^{2l+1}_{n-l-1} \left(\frac{2r}{n a_0}\right) $$
 # where $a_0$ is the Bohr radius and $L^{2l+1}_{n-l-1}\left(\frac{2r}{n a_0}\right)$ are the associated Laguerre polynomials.
@@ -139,4 +141,6 @@ ax.set_xlabel(r"$x (a_0)$")
 ax.set_ylabel(r"$y (a_0)$")
 ax.set_title("Hydrogen Probability Density for n="+str(n)+", l="+str(l)+", m="+str(m))
 
-# Those of you interested in computational physics might like to qwork out how to plot
+# Those of you interested in computational physics might like to qwork out how to create a 3D version of the probability density plot. 
+
+
