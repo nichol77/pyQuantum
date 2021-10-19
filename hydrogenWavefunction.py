@@ -5,7 +5,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.7.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -14,7 +14,7 @@
 
 # # Hydrogen wavefunctions
 #
-# None of the material in this notebook is required knowledge for PHAS0004. These are topics you will come back to in next year's quant
+# None of the material in this notebook is required knowledge for PHAS0004. These are topics you will come back to in next year's quantum physics course.
 #
 # The normalised radial wavefunction is:
 # $$ R_{nl}(r)=\sqrt{\left(\frac{2}{n a_0}\right)^3 \frac{(n-l-1)!}{2n(n+l)!}} \exp\left(\frac{-r}{n a_0}\right) \left(\frac{2r}{n a_0}\right)^l L^{2l+1}_{n-l-1} \left(\frac{2r}{n a_0}\right) $$
@@ -69,8 +69,9 @@ def radialHydrogenrSqRho(r,n,l):
 #Now let's plot our wavefunction
 fig, ax = plt.subplots()  #I like to make plots using this silly fig,ax method but plot how you like
 r=np.linspace(0,30,100)
+ax.plot(r,radialHydrogenPsi(r,1,0),linewidth=3,label=r"$R_{1,0}$") #Plot x vs sin (pi x)
+ax.plot(r,radialHydrogenPsi(r,2,0),linewidth=3,label=r"$R_{2,0}$") #Plot x vs sin (pi x)
 ax.plot(r,radialHydrogenPsi(r,3,0),linewidth=3,label=r"$R_{3,0}$") #Plot x vs sin (pi x)
-ax.plot(r,radialHydrogenPsi(r,3,1),linewidth=3,label=r"$R_{3,1}$") #Plot x vs sin (pi x)
 ax.set_title(r"Hydrogen Radial Wavefunction")  #Set the title
 ax.set_xlabel("$r (a_0)$") # Set the x-axis label
 ax.set_ylabel("$R_{nl}(r)$") # Set the y-axis label
@@ -141,6 +142,6 @@ ax.set_xlabel(r"$x (a_0)$")
 ax.set_ylabel(r"$y (a_0)$")
 ax.set_title("Hydrogen Probability Density for n="+str(n)+", l="+str(l)+", m="+str(m))
 
-# Those of you interested in computational physics might like to qwork out how to create a 3D version of the probability density plot. 
+# Those of you interested in computational physics might like to work out how to create a 3D version of the probability density plot. 
 
 

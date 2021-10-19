@@ -5,7 +5,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.7.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -143,6 +143,9 @@ ax.set_xlabel("$x$") # Set the x-axis label
 ax.set_ylabel(r"$\psi(x)$") # Set the y-axis label
 ax.grid() # Draw a grid
 
+# +
+#
 # -
+
 
 
